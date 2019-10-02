@@ -2,7 +2,7 @@ import torch
 from torch import optim, nn
 import ClothesClassifier
 
-def train(net, trainloader, testloader, device = "cpu", epochs= 5, batch_size= 64, learning_rate= 0.001):
+def train(net, trainloader, testloader, device = "cpu", epochs= 5, learning_rate= 0.001):
     train_loss = 0
     optimizer = optim.Adam(net.parameters(), lr = learning_rate)
     criterion = nn.CrossEntropyLoss()
